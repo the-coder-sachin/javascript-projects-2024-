@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+main {
+    height: 100vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slide {
+    height: 250px;
+    width: 550px;
+    background-color: rebeccapurple;
+    position: absolute;
+    padding: 20px;
+    border-radius: 45px 0px 45px 0px;
+    box-shadow: 10px 10px 45px 10px black, inset 0px 0px 20px #b97df5;
+    border: 2px solid white;
+}
+
+.animation {
+    animation: myAnimation 2s cubic-bezier(1, 0.23, 0, 0.85) 0s infinite forwards;
+}
+
+.in {
+    animation: slideIn 3s forwards;
+}
+
+.out {
+    animation: slideOut 3s forwards;
+}
+
+p {
+    position: absolute;
+    top: 40%;
+    color: white;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+h1 {
+    position: absolute;
+    bottom: 10%;
+    font-size: 22px;
+    color: white;
+}
+
+img {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    left: calc(50% - 80px);
+    top: -80px;
+}
+
+
+@keyframes myAnimation {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    15% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.animation-btn {
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+    padding: 5px 12px;
+}
+
+.pause-btn {
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    padding: 5px 12px;
+}
+
+.animation-slider{
+    position: absolute;
+    width: 200px;
+    top: 5vh;
+    left: calc(50% - 100px );
+    cursor: pointer;
+    text-align: center;
+}
+.content-updation{
+    position: absolute;
+    width: 200px;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.content-updation input{
+    width: 100%;
+    cursor: pointer;
+}
+.btn{
+    padding: 6px 15px;
+    cursor: pointer;
+    background-color: yellow;
+    border-radius: 15px;
+}
+
