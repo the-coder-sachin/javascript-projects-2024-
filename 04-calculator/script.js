@@ -16,7 +16,7 @@ btns.forEach(btn=>{
         else{
             let lastChar = display.value[display.value.length-1];
             let operators = ['+', '-', '*', '/', '%'];
-            if(operators.includes(val) && operators.includes(lastChar)){
+            if(operators.includes(val) && operators.includes(lastChar) || !display.value && operators.includes(val)){
                 return;
             }
             display.value = `${display.value}${val}`
