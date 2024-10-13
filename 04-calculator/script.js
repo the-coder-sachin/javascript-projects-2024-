@@ -7,20 +7,52 @@ btns.forEach(btn=>{
         if(val === 'AC'){
             display.value = ``
         }else if(val === 'DEL'){
-            let str = display.value;
-            display.value = str.slice(0, str.length-1)
+           clearLastDigit()
         }else if(val === '='){
-            if(display.value){
-            display.value = eval(display.value)}
+           evaluate()
         }
         else{
-            let lastChar = display.value[display.value.length-1];
-            let operators = ['+', '-', '*', '/', '%'];
-            if(operators.includes(val) && operators.includes(lastChar) || !display.value && operators.includes(val)){
-                return;
-            }
-            display.value = `${display.value}${val}`
+            appendToDisplay(val)
         }
         
     })
+})
+
+function clearLastDigit(){
+     let str = display.value;
+     display.value = str.slice(0, str.length - 1);
+}
+function evaluate (){
+      if (display.value) {
+        display.value = eval(display.value);
+      }
+}
+
+function appendToDisplay(val){
+    let lastChar = display.value[display.value.length - 1];
+    let operators = ["+", "-", "*", "/", "%"];
+    if (
+      (operators.includes(val) && operators.includes(lastChar)) ||
+      (!display.value && operators.includes(val))
+    ) {
+      return;
+    }
+    display.value = `${display.value}${val}`;
+}
+
+document.addEventListener('keydown' , (e)=>{
+    let val = e.key;
+    const validKeys = ['1','2','3','4','5','6','7','8','9','0','+','-','*','/','%'];
+    if(validKeys.includes(val)){
+        appendToDisplay(val)
+    }else if(val === 'Enter'){
+        evaluate()
+    }else if(val === 'Backspace'){
+        clearLastDigit()
+    }else if(val === ' '){
+        display.value = ''
+    }
+    else{
+        console.log(`some error`);
+    }
 })
