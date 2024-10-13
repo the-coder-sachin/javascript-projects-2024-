@@ -23,7 +23,9 @@ function clearLastDigit(){
      display.value = str.slice(0, str.length - 1);
 }
 function evaluate (){
-      if (display.value) {
+    let operators = ["+", "-", "*", "/", "%"];
+    let lastChar = display.value[display.value.length -1 ]
+      if (display.value && !operators.includes(lastChar)) {
         display.value = eval(display.value);
       }
 }
@@ -53,6 +55,6 @@ document.addEventListener('keydown' , (e)=>{
         display.value = ''
     }
     else{
-        console.log(`some error`);
+        console.error(`error: invalid input`);
     }
 })
