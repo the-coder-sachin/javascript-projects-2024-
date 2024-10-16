@@ -7,9 +7,10 @@ searchBar.addEventListener('input', (e)=>{
     let query = e.target.value;
     console.log(query);
      userArr.filter((curElem) => {
+        
        curElem.innerText.toLowerCase().includes(query.toLowerCase())
-         ? curElem.classList.remove("hide")
-         : curElem.classList.add("hide");
+         ? curElem.style.display = `flex`
+         : curElem.style.display = 'none';
      });
     
 })

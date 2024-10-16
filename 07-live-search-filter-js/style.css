@@ -81,7 +81,7 @@ input{
     width: 100%;
     gap: 15px;
 }
-.user-list .user{
+.user-list li{
     background-color: var(--red);
     display: flex;
     align-items: center;
@@ -112,7 +112,4 @@ input{
 }
 .user .link a{
     color: var(--yellow);
-}
-.hide{
-    display: none;
 }
