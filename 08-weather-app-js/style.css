@@ -1,0 +1,106 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'roboto', Helvetica, sans-serif;
+}
+html, body{
+height: 100%;
+width: 100%;
+}
+.background{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: blur(1.3px) brightness(0.4);
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.283);
+    padding: 20px;
+    height: 88vh;
+    width: 390px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+main header{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 10px;
+}
+main header input{
+    width: 100%;
+    padding: 10px 10px 10px 25px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ffffff61;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #0000002e;
+}
+main header input::placeholder {
+    color: #ffffff;
+}
+main header button{
+    padding: 4px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+    color: #fff;
+    cursor: pointer;
+}
+.temp-info{
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+.temp-info .city{
+    text-align: center;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.temp-info .date{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.temp-info .temp{
+    font-size: 80px;
+    text-shadow: 5px 5px 0px #000;
+    margin: 35px;
+    font-weight: 500;
+}
+.temp-info .condition{
+    font-size: 35px;
+}
+.temp-info .temp-range{
+    font-size: 24px;
+    font-weight: 500;
+}
+.additional-info{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 13px;
+    margin-top: 20px;
+    font-family: cursive;
+}
+.cursive{
+    font-family: cursive;
+}

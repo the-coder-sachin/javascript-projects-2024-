@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <img class="background" src="./assets/img/bg.jpg" alt="">
+    <div class="wrapper">
+        <main>
+            <header>
+                <input class="search-bar" type="text" placeholder="enter city . . .">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </header>
+            <div class="temp-info">
+                <h2 class="city">patna, IN</h2>
+                <h4 class="date">tuesday 15 october 2024</h4>
+                <h1 class="temp">33°c</h1>
+                <h2 class="condition"><i>clear</i></h2>
+                <h3 class="temp-range">28 <sup>o</sup>C/ 35<sup>o</sup>C</h3>
+                <div class="additional-info">
+                    <div class="humidity cursive">humidity: 12</div>
+                    <div class="feels-like cursive">feels like: 12</div>
+                    <div class="pressure cursive">pressure: 12</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
