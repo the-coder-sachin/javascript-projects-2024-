@@ -1,0 +1,79 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+height: 100%;
+width: 100%;
+background-color: #fff3e4;
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: antiquewhite;
+    padding: 0px 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.logo h1{
+    font-size: 1.3rem;
+    background: linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+.logo span{
+    font-size: 12px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0px 90px 0px 90px;
+}
+li{
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    border-bottom: 4px solid transparent;
+}
+li:hover{
+    border-bottom: 4px solid brown;
+}
+
+@media screen and (max-width: 730px) {
+    ul{
+        padding: 0px 10px;
+    }
+    .logo{
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+   ul{
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: antiquewhite;
+    height: calc(100vh - 60px);
+    width: 90px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: inset 0px 10px 10px -10px black,
+    5px 0px 10px -6px black;
+    padding: 0px;
+   }
+   li{
+    width: 100%;
+   }
+}
