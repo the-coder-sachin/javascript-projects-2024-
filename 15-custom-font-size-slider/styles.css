@@ -1,0 +1,136 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+height: 100%;
+width: 100%;
+}
+.wrapper{
+    background-color: #C879FF;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 24px;
+}
+.top{
+    display: flex;
+    height: 50vh;
+    gap: 24px;
+}
+.input-section, .output-section, .controls-section{
+    width: 100%;
+    height: 295px;
+    box-shadow: 0px 0px 7px #fff;
+    border: 4px solid #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.label{
+    text-align: center;
+    background-color: #826AED;
+    padding: 12px ;
+}
+.input{
+    background-color: #B3A8FE;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+.input > p{
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.text-input{
+    background-color: #C879FF;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 8px;
+}
+.text-input::placeholder{
+    color: #000;
+}
+.output{
+    width: 100%;
+    height: calc(100% - 45px);
+    background-color: #826AED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 45px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.controls-section{
+    height: 100%;
+}
+.controls{
+    padding: 10px;
+    background-color: #9DD6FD;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.control{
+    /* background-color: red; */
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 8px;
+}
+.range{
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+}
+.range .control{
+    display: flex;
+    justify-content: space-between;
+}
+.checkboxes{
+    height: 135px;
+    font-size: 12px;
+}
+.checkboxes .control{
+    display: flex;
+    justify-content: space-between;
+    height: 33px;
+}
+.colors{
+    font-size: 12px;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+}
+.color-box{
+    border: 5px solid white;
+    outline: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.colors .control{
+    display: flex;
+    justify-content: space-between;
+}
+.controls input{
+    cursor: pointer;
+}
+.normal-font-style-input, .cursive-font-style-input{
+    margin-right: 7px;
+}

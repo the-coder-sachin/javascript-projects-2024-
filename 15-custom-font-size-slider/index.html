@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Font Size</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+       <div class="top">
+           <div class="input-section">
+            <h3 class="label">input</h3>
+            <div class="input">
+                <p>enter text below</p>
+                <input type="text" class="text-input" placeholder="Enter Random Text..">
+            </div>
+        </div>
+        <div class="output-section">
+            <h3 class="label">output</h3>
+            <div class="output">
+                <p class="display">Random Text</p>
+            </div>
+        </div>
+       </div>
+        <div class="controls-section">
+            <h3 class="label">controls</h3>
+            <div class="controls">
+                <div class="range">
+                    <div class="control">
+                        <label for="size">Font Size(56): </label>
+                        <input type="range" value="56" min="14" max="100" class="font-size">
+                    </div>
+                    <div class="control">
+                        <label for="size">Horizontal Offset: </label>
+                        <input type="range" value="0" min="-20" max="20" class="horizontal-offset">
+                    </div>
+                    <div class="control">
+                        <label for="size">Vertical Offset: </label>
+                        <input type="range" value="0" min="-20" max="20" class="vertical-offset">
+                    </div>
+                    <div class="control">
+                        <label for="size">Blur Intensity: </label>
+                        <input type="range" value="10" min="0" max="20" class="blur-intensity">
+                    </div>
+                </div>
+
+
+                
+
+               <div class="checkboxes">
+                <div class="control">
+                    <label for="shadow">Shadow: </label>
+                    <input class="shadow-input" type="checkbox">
+                </div>
+                <div class="control">
+                    <label for="shadow">Bold: </label>
+                    <input class="bold-input" type="checkbox">
+                </div>
+                <div class="control">
+                    <label for="shadow">Italic: </label>
+                    <input class="italic-input" type="checkbox">
+                </div>
+                <div class="control">
+                    <label for="shadow">Underline: </label>
+                    <input class="underline-input" type="checkbox">
+                </div>
+               </div>
+
+            <div class="colors">
+                <div class="control">
+                    <label for="color">Text Color: </label>
+                    <input type="color" class="text-color color-box" value="#ffffff">
+                </div>
+                <div class="control">
+                    <label for="shadow-color">Shadow Color: </label>
+                    <input type="color" class="shadow-color color-box" value="#000">
+                </div>
+                <div class="control">
+                    <label for="shadow">font (normal): </label>
+                    <input class="normal-font-style-input" type="checkbox">
+                </div>
+                <div class="control">
+                    <label for="shadow">font (cursive): </label>
+                    <input class="cursive-font-style-input" type="checkbox">
+                </div>
+                
+            </div>
+
+               
+                
+            </div>
+        </div>
+    </div>
+    </body>
+    <script src="script.js"></script>
+</html>
