@@ -1,0 +1,92 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+height: 100%;
+width: 100%;
+}
+:root{
+    --dark: #021526;
+    --medium: #03346E;
+    --light: #6EACDA;
+    --txt: #E2E2B6;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--dark);
+    height: auto;
+}
+main{
+    margin-top: 30px;
+    background-color: var(--light);
+    color: var(--dark);
+    width: 80%;
+    overflow: hidden;
+    min-height: calc(100vh - 60px );
+    border-radius: 16px;
+}
+main .title{
+    text-align: center;
+    background-color: var(--medium);
+    padding: 10px;
+    color: var(--light);
+}
+main form {
+    display: flex;
+    padding: 10px 10px;
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid var(--medium);
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    font-size: 1rem;
+    color: var(--medium);
+}
+form input::placeholder{
+    color: var(--medium);
+}
+form button{
+    padding: 9px;
+    font-weight: 600;
+    background-color: var(--medium);
+    color: var(--txt);
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+    height: 100%;
+    overflow: auto;
+}
+.list .item-container{
+    display: flex;
+    padding: 8px 0px;
+    gap: 10px;
+    align-items: center;
+}
+.list .item-container .item{
+    width: 100%;
+    margin-left: 10px;
+}
+.line-through{
+    text-decoration: line-through;
+    width: 100%;
+    margin-left: 10px;
+}
+.checkbox{
+    cursor: pointer;
+}
+i{
+    cursor: pointer;
+}
