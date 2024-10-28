@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div class="status-container">
+            <div class="title-detail">
+                <h1>Todo App</h1>
+                <p>keep it up</p>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="score-board">
+                <p class="score">0 / 0</p>
+            </div>
+        </div>
+
+
+        <form>
+            <input id="todo-input" type="text" placeholder="Tasks...">
+            <button id="submit">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </form>
+
+        <ul class="task-list">
+           
+        </ul>
+    </main>
+</body>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</html>
