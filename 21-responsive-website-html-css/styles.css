@@ -1,0 +1,165 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.btn{
+    background: linear-gradient(45deg, #9c7a0b, #07496c, #56054e);
+    padding: 10px;
+    border-radius: 1rem;
+}
+.btn:hover{
+    background: linear-gradient(45deg, #2d9c0b, #229adb, #fa205e);
+    padding: 10px;
+    border-radius: 1rem;
+}
+:root{
+    --dark-blue1: #08191c;
+    --dark-blue2: #12272e;
+    --light-blue1: #437184;
+
+}
+
+
+/*  header  */
+
+header{
+    background-image: url(./AdventureWebstieImages/img/header-bg.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(2px);
+    backface-visibility: visible;
+    color: white;
+}
+header .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    gap: 30px;
+}
+header .content a{
+    text-decoration: none;
+    color: white;
+}
+header .content h1{
+    font-size: 50px;
+    text-align: center;
+    border: 1px solid;
+    padding: 1em;
+}
+
+header .content p{
+    font-family: cursive;
+    text-align: center;
+}
+
+header nav{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    justify-content: space-between;
+    background: linear-gradient(90deg, var(--dark-blue2), var(--light-blue1), var(--dark-blue1));
+    position: relative;
+}
+.logo img{
+    border-radius: 50%;
+    height: 70px;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px black;
+}
+.open-menu i{
+    font-size: 30px;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+    opacity: 0;
+}
+.close-menu{
+    display: none;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.nav-links .hover-border{
+    margin: 0px 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid rgba(245, 222, 179, 0);
+    transition: border 0.3s ease-in-out;
+}
+.hover-border:hover{
+    border-bottom: 3px solid white;
+}
+
+.hover-border:hover a{
+    color: #fbff7e;
+}
+
+@media screen and (max-width: 650px) {
+    header{
+        height: 150vh;
+    }
+    .nav-links{
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-around;
+        background-color: #07496cf4;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        z-index: 10;
+        padding: 30px;
+        display: none;
+    }
+    .hover-border{
+        background-color: #08191c7c;
+        max-height: 50px;
+        border-radius: 1rem;
+        width: 100px;
+        border: 2px solid rgba(255, 255, 255, 0);
+    }
+    .hover-border:hover{
+        border: 2px solid #ffffff;
+        border-radius: 1rem;
+    }
+    .close-menu{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    .open-menu i{
+        opacity: 1;
+        color: #d6f5f1;
+    }
+}
+@media screen and (max-width: 350px) {
+    header{
+        height: 170vh;
+    }
+}
