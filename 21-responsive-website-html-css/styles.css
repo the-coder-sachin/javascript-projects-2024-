@@ -9,9 +9,12 @@ html, body{
     width: 100%;
 }
 .btn{
-    background: linear-gradient(45deg, #9c7a0b, #07496c, #56054e);
+    /* background: linear-gradient(45deg, #9c7a0b, #07496c, #56054e); */
+    background-color: #fa205e;
+    color: white;
     padding: 10px;
     border-radius: 1rem;
+    display: inline;
 }
 .btn:hover{
     background: linear-gradient(45deg, #2d9c0b, #229adb, #fa205e);
@@ -115,6 +118,57 @@ header nav{
 .hover-border:hover a{
     color: #fbff7e;
 }
+
+
+
+/* Upcoming Events */
+
+.events{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.events h1{
+    text-align: center;
+    color: #313131;
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #fa205e;
+    width: 400px;
+    align-self: center;
+    margin-bottom: 30px;
+}
+.events .container{
+    display: flex;
+
+}
+.events .container .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+.card img{
+    height: 250px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px var(--dark-blue1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 650px) {
     header{
