@@ -1,14 +1,17 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-html, body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
-.btn{
+
+.btn {
     /* background: linear-gradient(45deg, #9c7a0b, #07496c, #56054e); */
     background-color: #fa205e;
     color: white;
@@ -16,12 +19,14 @@ html, body{
     border-radius: 1rem;
     display: inline;
 }
-.btn:hover{
+
+.btn:hover {
     background: linear-gradient(45deg, #2d9c0b, #229adb, #fa205e);
     padding: 10px;
     border-radius: 1rem;
 }
-:root{
+
+:root {
     --dark-blue1: #08191c;
     --dark-blue2: #12272e;
     --light-blue1: #437184;
@@ -31,9 +36,10 @@ html, body{
 
 /*  header  */
 
-header{
+header {
     background-image: url(./AdventureWebstieImages/img/header-bg.png);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
     background-size: cover;
     background-position: center;
@@ -41,7 +47,8 @@ header{
     backface-visibility: visible;
     color: white;
 }
-header .content{
+
+header .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,23 +56,25 @@ header .content{
     padding: 5rem;
     gap: 30px;
 }
-header .content a{
+
+header .content a {
     text-decoration: none;
     color: white;
 }
-header .content h1{
+
+header .content h1 {
     font-size: 50px;
     text-align: center;
     border: 1px solid;
     padding: 1em;
 }
 
-header .content p{
+header .content p {
     font-family: cursive;
     text-align: center;
 }
 
-header nav{
+header nav {
     height: 90px;
     display: flex;
     align-items: center;
@@ -74,35 +83,41 @@ header nav{
     background: linear-gradient(90deg, var(--dark-blue2), var(--light-blue1), var(--dark-blue1));
     position: relative;
 }
-.logo img{
+
+.logo img {
     border-radius: 50%;
     height: 70px;
     object-fit: cover;
     border: 3px solid white;
     box-shadow: 0px 0px 10px black;
 }
-.open-menu i{
+
+.open-menu i {
     font-size: 30px;
     color: white;
     opacity: 1;
     cursor: pointer;
     opacity: 0;
 }
-.close-menu{
+
+.close-menu {
     display: none;
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     align-items: center;
     list-style: none;
     height: 100%;
 }
-.nav-links a{
+
+.nav-links a {
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
-.nav-links .hover-border{
+
+.nav-links .hover-border {
     margin: 0px 25px;
     height: 100%;
     display: flex;
@@ -111,11 +126,12 @@ header nav{
     border-bottom: 3px solid rgba(245, 222, 179, 0);
     transition: border 0.3s ease-in-out;
 }
-.hover-border:hover{
+
+.hover-border:hover {
     border-bottom: 3px solid white;
 }
 
-.hover-border:hover a{
+.hover-border:hover a {
     color: #fbff7e;
 }
 
@@ -123,42 +139,85 @@ header nav{
 
 /* Upcoming Events */
 
-.events{
-    height: 100vh;
+.events {
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 2rem;
 }
-.events h1{
+
+.events h1 {
     text-align: center;
     color: #313131;
     font-size: 40px;
     padding-bottom: 10px;
     border-bottom: 4px solid #fa205e;
-    width: 400px;
+    max-width: 400px;
     align-self: center;
     margin-bottom: 30px;
 }
-.events .container{
-    display: flex;
 
-}
-.events .container .card{
+.events .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.events .container .card {
+    display: flex;
+    max-width: 450px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     text-align: center;
 }
-.card img{
-    height: 250px;
+
+.card img {
+    max-width: 300px;
     border-radius: 1rem;
     box-shadow: 5px 5px 5px var(--dark-blue1);
 }
 
 
+/* dream section */
 
+.dream-section {
+    padding: 2rem;
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+    flex-direction: column;
+    background-image: url(./AdventureWebstieImages/img/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dream-section>h1 {
+    margin-top: 70px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #fa205e;
+    align-self: center;
+    margin-bottom: 100px;
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
+.dream-section p {
+    color: white;
+    margin: 5px;
+}
+
+.dream-section .btn {
+    display: inline;
+    margin-top: 80px;
+    align-self: center;
+}
 
 
 
@@ -171,10 +230,11 @@ header nav{
 
 
 @media screen and (max-width: 650px) {
-    header{
-        height: 150vh;
+    header {
+        height: auto;
     }
-    .nav-links{
+
+    .nav-links {
         flex-direction: column;
         position: absolute;
         justify-content: space-around;
@@ -188,18 +248,21 @@ header nav{
         padding: 30px;
         display: none;
     }
-    .hover-border{
+
+    .hover-border {
         background-color: #08191c7c;
         max-height: 50px;
         border-radius: 1rem;
         width: 100px;
         border: 2px solid rgba(255, 255, 255, 0);
     }
-    .hover-border:hover{
+
+    .hover-border:hover {
         border: 2px solid #ffffff;
         border-radius: 1rem;
     }
-    .close-menu{
+
+    .close-menu {
         position: absolute;
         right: 30px;
         top: 30px;
@@ -207,13 +270,31 @@ header nav{
         cursor: pointer;
         display: block;
     }
-    .open-menu i{
+
+    .open-menu i {
         opacity: 1;
         color: #d6f5f1;
     }
+
+
+    .events .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .events{
+        height: auto;
+    }
+
+    .dream-section{
+        height: auto;
+    }
 }
+
 @media screen and (max-width: 350px) {
-    header{
-        height: 170vh;
+    header .content h1{
+        font-size: 30px;
+    }
+    .card img{
+        width: 250px;
     }
 }
